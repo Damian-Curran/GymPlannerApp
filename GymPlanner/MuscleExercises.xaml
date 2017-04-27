@@ -33,6 +33,9 @@
         <Button HorizontalAlignment="Center" VerticalAlignment="Center" Name="ForumPage" Width="200" Height="100" Click="btn5_click" Grid.Column="1" Grid.Row="7">
             Create Plan
         </Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Name="returnPage" Width="60" Height="40" Click="returnButton" Grid.Column="0" Grid.Row="0" Background="Gray">
+            Back
+        </Button>
         <TextBlock x:Name="DupBox" HorizontalAlignment="Center" VerticalAlignment="Center" Text="" Grid.Column="1" Grid.Row="9" Foreground="Yellow"></TextBlock>
     </Grid>
 </Page>

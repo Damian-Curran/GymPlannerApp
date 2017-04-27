@@ -135,5 +135,10 @@ namespace GymPlanner
                 DupBox.Text = "Fill all boxes \n No duplicates";
             }
         }
+
+        private void returnButton(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MuscleGroups));
+        }
     }
 }

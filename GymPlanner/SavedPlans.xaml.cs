@@ -65,6 +65,17 @@ namespace GymPlanner
 
             }
 
+            Button btn = new Button();
+            btn.Name = "return";
+            btn.Content = "Back";
+            btn.HorizontalAlignment = HorizontalAlignment.Left;
+            btn.VerticalAlignment = VerticalAlignment.Top;
+            btn.Click += returnButton;
+
+            Grid.SetColumn(btn, 0);
+            Grid.SetRow(btn, 0);
+            DynamicGrid.Children.Add(btn);
+
             counter = 0;
             string[] getPlan = new string[8];
             int j = 0;
@@ -129,6 +140,11 @@ namespace GymPlanner
 
             obj.planPicked = number2;
             Frame.Navigate(typeof(PlanExercises));
+        }
+
+        private void returnButton(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
         }
     }
 }

@@ -26,5 +26,10 @@ namespace GymPlanner
         {
             this.InitializeComponent();
         }
+
+        private void returnBack(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

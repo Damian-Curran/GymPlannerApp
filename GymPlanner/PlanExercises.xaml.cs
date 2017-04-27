@@ -102,6 +102,17 @@ namespace GymPlanner
 
             }
 
+            Button btn = new Button();
+            btn.Name = "return";
+            btn.Content = "Back";
+            btn.HorizontalAlignment = HorizontalAlignment.Left;
+            btn.VerticalAlignment = VerticalAlignment.Top;
+            btn.Click += returnButton;
+
+            Grid.SetColumn(btn, 0);
+            Grid.SetRow(btn, 0);
+            DynamicGrid.Children.Add(btn);
+
             for (int i = 0; i <= 42; i++)
             {
                 if (randomMuscle1 == reee[i, 0] || randomMuscle2 == reee[i, 0])
@@ -245,6 +256,17 @@ namespace GymPlanner
 
             }
 
+            Button btn = new Button();
+            btn.Name = "return";
+            btn.Content = "Back";
+            btn.HorizontalAlignment = HorizontalAlignment.Left;
+            btn.VerticalAlignment = VerticalAlignment.Top;
+            btn.Click += returnButton1;
+
+            Grid.SetColumn(btn, 0);
+            Grid.SetRow(btn, 0);
+            DynamicGrid.Children.Add(btn);
+
             for (int i = 0; i <= 42; i++)
             {
                 for (int j = 0; j <= 5; j++)
@@ -358,6 +380,17 @@ namespace GymPlanner
 
             }
 
+            Button btn = new Button();
+            btn.Name = "return";
+            btn.Content = "Back";
+            btn.HorizontalAlignment = HorizontalAlignment.Left;
+            btn.VerticalAlignment = VerticalAlignment.Top;
+            btn.Click += returnButton2;
+
+            Grid.SetColumn(btn, 0);
+            Grid.SetRow(btn, 0);
+            DynamicGrid.Children.Add(btn);
+
             counter = 0;
             string[] getPlan = new string[8];
             int j = 0;
@@ -385,6 +418,7 @@ namespace GymPlanner
                                     Image img = new Image();
                                     BitmapImage tmp = new BitmapImage(new Uri(reee[i, 2], UriKind.Absolute));
                                     img.Source = tmp;
+                                    img.Stretch = Stretch.Fill;
                                     Grid.SetRow(img, rowCount);
                                     Grid.SetColumn(img, 0);
                                     DynamicGrid.Children.Add(img);
@@ -452,6 +486,21 @@ namespace GymPlanner
             }
 
             ExerciseLayout.Children.Add(DynamicGrid);
+        }
+
+        private void returnButton(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MuscleGroups));
+        }
+
+        private void returnButton1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MuscleExercises));
+        }
+
+        private void returnButton2(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SavedPlans));
         }
     }
 }

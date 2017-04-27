@@ -73,5 +73,10 @@ namespace GymPlanner
                 DupBox.Text = "Both options \n picked are the same";
             }
         }
+
+        private void returnButton(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }
