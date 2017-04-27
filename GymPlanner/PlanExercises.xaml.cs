@@ -26,11 +26,15 @@ namespace GymPlanner
         string randomMuscle1 = "";
         string randomMuscle2 = "";
 
+        string[,] reee = new string[43, 5];
+
         public PlanExercises()
         {
             this.InitializeComponent();
 
             var obj = App.Current as App;
+
+            Array.Copy(obj.GlobalExerciseArray, 0, reee, 0, obj.GlobalExerciseArray.Length);
 
             randomMuscle1 = obj.exercise1;
             randomMuscle2 = obj.exercise2;
@@ -91,7 +95,7 @@ namespace GymPlanner
             }
 
             TextBlock label1 = new TextBlock();
-            label1.Text = "hello";
+            label1.Text = reee[2, 1];
             label1.FontSize = 10;
             label1.VerticalAlignment = VerticalAlignment.Top;
             label1.HorizontalAlignment = HorizontalAlignment.Center;
