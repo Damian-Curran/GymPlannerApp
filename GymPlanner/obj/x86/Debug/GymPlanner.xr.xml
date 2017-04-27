@@ -37,6 +37,7 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="GymPlanner.MainPage" />
+    <RootType FullName="GymPlanner.MuscleExercises" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />

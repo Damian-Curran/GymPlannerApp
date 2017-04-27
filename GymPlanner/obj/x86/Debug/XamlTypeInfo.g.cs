@@ -132,23 +132,25 @@ namespace GymPlanner.GymPlanner_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[7];
+            _typeNameTable = new string[8];
             _typeNameTable[0] = "GymPlanner.ForumPosts";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "GymPlanner.MainPage";
-            _typeNameTable[4] = "GymPlanner.MuscleGroups";
-            _typeNameTable[5] = "GymPlanner.PlanExercises";
-            _typeNameTable[6] = "GymPlanner.SavedPlans";
+            _typeNameTable[4] = "GymPlanner.MuscleExercises";
+            _typeNameTable[5] = "GymPlanner.MuscleGroups";
+            _typeNameTable[6] = "GymPlanner.PlanExercises";
+            _typeNameTable[7] = "GymPlanner.SavedPlans";
 
-            _typeTable = new global::System.Type[7];
+            _typeTable = new global::System.Type[8];
             _typeTable[0] = typeof(global::GymPlanner.ForumPosts);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::GymPlanner.MainPage);
-            _typeTable[4] = typeof(global::GymPlanner.MuscleGroups);
-            _typeTable[5] = typeof(global::GymPlanner.PlanExercises);
-            _typeTable[6] = typeof(global::GymPlanner.SavedPlans);
+            _typeTable[4] = typeof(global::GymPlanner.MuscleExercises);
+            _typeTable[5] = typeof(global::GymPlanner.MuscleGroups);
+            _typeTable[6] = typeof(global::GymPlanner.PlanExercises);
+            _typeTable[7] = typeof(global::GymPlanner.SavedPlans);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -185,9 +187,10 @@ namespace GymPlanner.GymPlanner_XamlTypeInfo
 
         private object Activate_0_ForumPosts() { return new global::GymPlanner.ForumPosts(); }
         private object Activate_3_MainPage() { return new global::GymPlanner.MainPage(); }
-        private object Activate_4_MuscleGroups() { return new global::GymPlanner.MuscleGroups(); }
-        private object Activate_5_PlanExercises() { return new global::GymPlanner.PlanExercises(); }
-        private object Activate_6_SavedPlans() { return new global::GymPlanner.SavedPlans(); }
+        private object Activate_4_MuscleExercises() { return new global::GymPlanner.MuscleExercises(); }
+        private object Activate_5_MuscleGroups() { return new global::GymPlanner.MuscleGroups(); }
+        private object Activate_6_PlanExercises() { return new global::GymPlanner.PlanExercises(); }
+        private object Activate_7_SavedPlans() { return new global::GymPlanner.SavedPlans(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -221,23 +224,30 @@ namespace GymPlanner.GymPlanner_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 4:   //  GymPlanner.MuscleGroups
+            case 4:   //  GymPlanner.MuscleExercises
                 userType = new global::GymPlanner.GymPlanner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_MuscleGroups;
+                userType.Activator = Activate_4_MuscleExercises;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  GymPlanner.PlanExercises
+            case 5:   //  GymPlanner.MuscleGroups
                 userType = new global::GymPlanner.GymPlanner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_PlanExercises;
+                userType.Activator = Activate_5_MuscleGroups;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  GymPlanner.SavedPlans
+            case 6:   //  GymPlanner.PlanExercises
                 userType = new global::GymPlanner.GymPlanner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_SavedPlans;
+                userType.Activator = Activate_6_PlanExercises;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  GymPlanner.SavedPlans
+                userType = new global::GymPlanner.GymPlanner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_SavedPlans;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

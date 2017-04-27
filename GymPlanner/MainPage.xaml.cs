@@ -29,21 +29,32 @@ namespace GymPlanner
 
         private void btn1_click(object sender, RoutedEventArgs e)
         {
+            var obj1 = App.Current as App;
+            obj1.pagePath = 1;
+
             Frame.Navigate(typeof(SavedPlans));
         }
 
         private void btn2_click(object sender, RoutedEventArgs e)
         {
+            var obj1 = App.Current as App;
+            obj1.pagePath = 2;
+
             Frame.Navigate(typeof(MuscleGroups));
         }
 
         private void btn3_click(object sender, RoutedEventArgs e)
         {
+            var obj1 = App.Current as App;
+            obj1.pagePath = 3;
+
             Frame.Navigate(typeof(MuscleGroups));
         }
 
         private void btn4_click(object sender, RoutedEventArgs e)
         {
+            var obj1 = App.Current as App;
+            obj1.pagePath = 4;
             Frame.Navigate(typeof(ForumPosts));
         }
     }
