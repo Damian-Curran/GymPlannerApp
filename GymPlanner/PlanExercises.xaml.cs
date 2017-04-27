@@ -110,11 +110,9 @@ namespace GymPlanner
                         myBorder1.BorderThickness = new Thickness(1);
 
                         Image img = new Image();
-                        //BitmapImage myImageSource = new BitmapImage();
-                        //myImageSource.UriSource = new Uri("Assets/atg.jpg");
                         BitmapImage tmp = new BitmapImage(new Uri(reee[i, 2], UriKind.Absolute));
-                        //img.Source = new BitmapImage(new Uri("Assets/atg.jpg"));
                         img.Source = tmp;
+                        img.Stretch = Stretch.Fill;
                         Grid.SetRow(img, counter);
                         Grid.SetColumn(img, 0);
                         DynamicGrid.Children.Add(img);

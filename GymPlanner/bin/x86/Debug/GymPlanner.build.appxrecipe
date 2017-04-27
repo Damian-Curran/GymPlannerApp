@@ -334,8 +334,110 @@
     <AppxPackagedFile Include="C:\Users\Damian Curran\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\abCrunch.png">
+      <PackagePath>Assets\abCrunch.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\backExtension.png">
+      <PackagePath>Assets\backExtension.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\barbellBench.png">
+      <PackagePath>Assets\barbellBench.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\barbellCurl.png">
+      <PackagePath>Assets\barbellCurl.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\cableCrossOver.png">
+      <PackagePath>Assets\cableCrossOver.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\cableCrunch.png">
+      <PackagePath>Assets\cableCrunch.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\cableCurl.png">
+      <PackagePath>Assets\cableCurl.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\calfRaises.png">
+      <PackagePath>Assets\calfRaises.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\chinUps.png">
+      <PackagePath>Assets\chinUps.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\deadlift.png">
+      <PackagePath>Assets\deadlift.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\deltoidRaises.png">
+      <PackagePath>Assets\deltoidRaises.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\dips.png">
+      <PackagePath>Assets\dips.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\dumbellBench.png">
+      <PackagePath>Assets\dumbellBench.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\dumbellCurls.png">
+      <PackagePath>Assets\dumbellCurls.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\dumbellFlyes.png">
+      <PackagePath>Assets\dumbellFlyes.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\flatSmith.png">
+      <PackagePath>Assets\flatSmith.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\floorWipper.png">
+      <PackagePath>Assets\floorWipper.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\fullsquat.png">
+      <PackagePath>Assets\fullsquat.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\hamstringCurls.png">
+      <PackagePath>Assets\hamstringCurls.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\inclineBarbellBench.png">
+      <PackagePath>Assets\inclineBarbellBench.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\inclineRows.png">
+      <PackagePath>Assets\inclineRows.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\inclineTricepExtension.png">
+      <PackagePath>Assets\inclineTricepExtension.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\kneeRaises.png">
+      <PackagePath>Assets\kneeRaises.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\latPulldown.png">
+      <PackagePath>Assets\latPulldown.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\legPress.png">
+      <PackagePath>Assets\legPress.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\lunges.png">
+      <PackagePath>Assets\lunges.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\overheadBarbell.png">
+      <PackagePath>Assets\overheadBarbell.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\overheadExtension.png">
+      <PackagePath>Assets\overheadExtension.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\pecDeck.png">
+      <PackagePath>Assets\pecDeck.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\pullUps.png">
+      <PackagePath>Assets\pullUps.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\quadExtension.png">
+      <PackagePath>Assets\quadExtension.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\rowBack.png">
+      <PackagePath>Assets\rowBack.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\shoulderFlies.png">
+      <PackagePath>Assets\shoulderFlies.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\skull-dumbbell.png">
+      <PackagePath>Assets\skull-dumbbell.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\tricepKickback.png">
+      <PackagePath>Assets\tricepKickback.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -363,6 +465,33 @@
     <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\atg.jpg">
+      <PackagePath>Assets\atg.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\bicepRopeCurls.jpg">
+      <PackagePath>Assets\bicepRopeCurls.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\gluteRaises.jpg">
+      <PackagePath>Assets\gluteRaises.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\hammerCurls.jpg">
+      <PackagePath>Assets\hammerCurls.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\legRaises.jpg">
+      <PackagePath>Assets\legRaises.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\overheadDumbell.jpg">
+      <PackagePath>Assets\overheadDumbell.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\tricepExtension.jpg">
+      <PackagePath>Assets\tricepExtension.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Assets\url.jpg">
+      <PackagePath>Assets\url.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\GymPlanner.xr.xml">
       <PackagePath>GymPlanner.xr.xml</PackagePath>
