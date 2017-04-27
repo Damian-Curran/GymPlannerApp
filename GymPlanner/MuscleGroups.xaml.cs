@@ -43,7 +43,35 @@ namespace GymPlanner
 
         private void btn5_click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(PlanExercises));
+            string var = "", var2 = "";
+            DupBox.Text = "";
+
+            if (Exercise1.SelectedItem != Exercise2.SelectedItem && Exercise1.SelectedItem != null && Exercise2.SelectedItem != null)
+            {
+                var = Exercise1.SelectedItem.ToString();
+                var2 = Exercise2.SelectedItem.ToString();
+
+                var obj = App.Current as App;
+                obj.exercise1 = var;
+                obj.exercise2 = var2;
+
+                if (obj.pagePath == 3)
+                {
+                    Frame.Navigate(typeof(PlanExercises));
+                }
+                else if (obj.pagePath == 2)
+                {
+                    Frame.Navigate(typeof(MuscleExercises));
+                }
+            }
+            else if (Exercise1.SelectedItem == null || Exercise2.SelectedItem == null)
+            {
+                DupBox.Text = "Select items in \n both drop down boxes";
+            }
+            else
+            {
+                DupBox.Text = "Both options \n picked are the same";
+            }
         }
     }
 }

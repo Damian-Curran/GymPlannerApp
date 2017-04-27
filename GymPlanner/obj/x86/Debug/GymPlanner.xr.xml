@@ -41,6 +41,12 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="Foreground" />
+    </RootType>
     <RootType FullName="GymPlanner.MuscleGroups" />
     <RootType FullName="GymPlanner.PlanExercises" />
     <RootType FullName="GymPlanner.SavedPlans" />

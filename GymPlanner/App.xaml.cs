@@ -26,6 +26,13 @@ namespace GymPlanner
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        /// 
+
+        public string exercise1 { get; set; }
+        public string exercise2 { get; set; }
+
+        public int pagePath { get; set; }
+
         public App()
         {
             this.InitializeComponent();

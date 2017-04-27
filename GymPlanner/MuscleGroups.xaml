@@ -25,5 +25,6 @@
         <Button HorizontalAlignment="Center" VerticalAlignment="Center" Name="ForumPage" Width="200" Height="100" Click="btn5_click" Grid.Column="1" Grid.Row="2">
             Select Groups
         </Button>
+        <TextBlock x:Name="DupBox" HorizontalAlignment="Center" VerticalAlignment="Center" Text="" Grid.Column="1" Grid.Row="3" Foreground="Yellow"></TextBlock>
     </Grid>
 </Page>
