@@ -31,6 +31,13 @@ namespace GymPlanner
         public string exercise1 { get; set; }
         public string exercise2 { get; set; }
 
+        public string muscleExer1 { get; set; }
+        public string muscleExer2 { get; set; }
+        public string muscleExer3 { get; set; }
+        public string muscleExer4 { get; set; }
+        public string muscleExer5 { get; set; }
+        public string muscleExer6 { get; set; }
+
         public int pagePath { get; set; }
 
         public string[,] GlobalExerciseArray = new string[43, 5] {
