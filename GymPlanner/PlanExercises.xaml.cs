@@ -196,9 +196,12 @@ namespace GymPlanner
                 }
             }
 
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
             var obj = App.Current as App;
             string one = obj.muscleExer1;
             int counter = 1;
+            int g = 0, q = 0;
+            bool quit = false;
 
             string[] boxes = new string[6];
             boxes[0] = obj.muscleExer1;
@@ -207,6 +210,26 @@ namespace GymPlanner
             boxes[3] = obj.muscleExer4;
             boxes[4] = obj.muscleExer5;
             boxes[5] = obj.muscleExer6;
+
+            while (quit == false)
+            {
+                if (localSettings.Values["someSettingInStorage" + "" + g] != null)
+                {
+                    g++;
+                }
+                else
+                {
+                    localSettings.Values["someSettingInStorage" + "" + g] = boxes[q].ToString();
+                    q++;
+                    if (q > 5)
+                    {
+                        g++;
+                        localSettings.Values["someSettingInStorage" + "" + g] = "1".ToString();
+
+                        quit = true;
+                    }
+                }
+            }
 
             for (int i = 0; i <= 6; i++)
             {
