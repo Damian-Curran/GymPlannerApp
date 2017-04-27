@@ -76,6 +76,17 @@ namespace GymPlanner
             Grid.SetRow(btn, 0);
             DynamicGrid.Children.Add(btn);
 
+            Button btn2 = new Button();
+            btn2.Name = "clear";
+            btn2.Content = "Clear Plans";
+            btn2.HorizontalAlignment = HorizontalAlignment.Right;
+            btn2.VerticalAlignment = VerticalAlignment.Top;
+            btn2.Click += btnDelete_Settings_Click;
+
+            Grid.SetColumn(btn2, 0);
+            Grid.SetRow(btn2, 0);
+            DynamicGrid.Children.Add(btn2);
+
             counter = 0;
             string[] getPlan = new string[8];
             int j = 0;
@@ -145,6 +156,12 @@ namespace GymPlanner
         private void returnButton(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
+        }
+
+        private async void btnDelete_Settings_Click(object sender, RoutedEventArgs e)
+        {
+            await Windows.Storage.ApplicationData.Current.ClearAsync();
+            Frame.Navigate(typeof(SavedPlans));
         }
     }
 }

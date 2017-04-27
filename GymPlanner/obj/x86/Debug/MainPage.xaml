@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="GymPlanner.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GymPlanner"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:ConnectionId='1' x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="400">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Button x:ConnectionId='2' HorizontalAlignment="Center" VerticalAlignment="Center" Name="SavedPlans" Width="200"  Height="100"                    Grid.Column="1" Grid.Row="0">
+            Saved Plans
+        </Button>
+        <Button x:ConnectionId='3' HorizontalAlignment="Center" VerticalAlignment="Center" Name="SelectPlan" Width="200"  Height="100"                    Grid.Column="1" Grid.Row="1">
+            Select Plan
+        </Button>
+        <Button x:ConnectionId='4' HorizontalAlignment="Center" VerticalAlignment="Center" Name="RandomPlan" Width="200"  Height="100"                    Grid.Column="1" Grid.Row="2">
+            Random Plan
+        </Button>
+        <Button x:ConnectionId='5' HorizontalAlignment="Center" VerticalAlignment="Center" Name="ForumPage" Width="200"  Height="100"                    Grid.Column="1" Grid.Row="3">
+            Forum Page
+        </Button>
+    </Grid>
+</Page>
+

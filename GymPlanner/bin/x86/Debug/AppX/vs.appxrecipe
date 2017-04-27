@@ -28,13 +28,13 @@
     <AppXManifest Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-27T03:01:46.742</Modified>
+      <Modified>2017-04-27T03:05:38.489</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\GymPlanner.exe">
       <PackagePath>entrypoint\GymPlanner.exe</PackagePath>
-      <Modified>2017-04-27T03:01:46.187</Modified>
+      <Modified>2017-04-27T03:05:37.925</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Damian Curran\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -660,7 +660,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\GymPlanner.xr.xml">
       <PackagePath>GymPlanner.xr.xml</PackagePath>
-      <Modified>2017-04-27T03:01:46.065</Modified>
+      <Modified>2017-04-27T03:05:37.791</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -669,11 +669,11 @@
     <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-27T03:01:46.586</Modified>
+      <Modified>2017-04-27T03:05:38.323</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\Core\GymPlanner.exe">
       <PackagePath>GymPlanner.exe</PackagePath>
-      <Modified>2017-04-27T03:01:46.738</Modified>
+      <Modified>2017-04-27T03:05:38.486</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
