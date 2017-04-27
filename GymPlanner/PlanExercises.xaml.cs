@@ -10,8 +10,10 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -66,6 +68,8 @@ namespace GymPlanner
 
             var width2 = new GridLength(2, GridUnitType.Star);
 
+            int counter = 0;
+
             for (int i = 0; i <= 1; i++)
             {
                 if (i == 0)
@@ -94,14 +98,72 @@ namespace GymPlanner
 
             }
 
-            TextBlock label1 = new TextBlock();
-            label1.Text = reee[2, 1];
-            label1.FontSize = 10;
-            label1.VerticalAlignment = VerticalAlignment.Top;
-            label1.HorizontalAlignment = HorizontalAlignment.Center;
-            Grid.SetColumn(label1, 1);
-            Grid.SetRow(label1, 3);
-            DynamicGrid.Children.Add(label1);
+            for (int i = 0; i <= 42; i++)
+            {
+                if (randomMuscle1 == reee[i, 0] || randomMuscle2 == reee[i, 0])
+                {
+                    counter++;
+                    for (int j = 0; j <= 4; j++)
+                    {
+                        Border myBorder1 = new Border();
+                        myBorder1.BorderBrush = new SolidColorBrush(Colors.Black);
+                        myBorder1.BorderThickness = new Thickness(1);
+
+                        Image img = new Image();
+                        //BitmapImage myImageSource = new BitmapImage();
+                        //myImageSource.UriSource = new Uri("Assets/atg.jpg");
+                        BitmapImage tmp = new BitmapImage(new Uri(reee[i, 2], UriKind.Absolute));
+                        //img.Source = new BitmapImage(new Uri("Assets/atg.jpg"));
+                        img.Source = tmp;
+                        Grid.SetRow(img, counter);
+                        Grid.SetColumn(img, 0);
+                        DynamicGrid.Children.Add(img);
+
+                        TextBlock label1 = new TextBlock();
+                        label1.Text = reee[i, 1];
+                        label1.FontSize = 10;
+                        label1.VerticalAlignment = VerticalAlignment.Top;
+                        label1.HorizontalAlignment = HorizontalAlignment.Center;
+                        Grid.SetColumn(label1, 1);
+                        Grid.SetRow(label1, counter);
+                        DynamicGrid.Children.Add(label1);
+
+                        TextBlock label2 = new TextBlock();
+                        label2.Text = reee[i, 3];
+                        label2.FontSize = 10;
+                        label2.VerticalAlignment = VerticalAlignment.Center;
+                        Grid.SetColumn(label2, 1);
+                        Grid.SetRow(label2, counter);
+                        DynamicGrid.Children.Add(label2);
+
+                        Run run1 = new Run();
+                        run1.Text = "For a link to a YouTube video click here";
+
+                        Hyperlink hyperlink = new Hyperlink()
+                        {
+                            NavigateUri = new Uri(reee[i, 4])
+                        };
+
+                        Border myBorder3 = new Border();
+                        myBorder3.BorderBrush = new SolidColorBrush(Colors.Black);
+                        myBorder3.BorderThickness = new Thickness(1);
+
+                        TextBlock label3 = new TextBlock();
+                        //label3.Text = reee[i, 4];
+                        label3.FontSize = 10;
+                        label3.VerticalAlignment = VerticalAlignment.Bottom;
+
+                        hyperlink.Inlines.Add(run1);
+                        label3.Inlines.Add(hyperlink);
+
+                        myBorder3.Child = label3;
+
+                        Grid.SetColumn(myBorder3, 1);
+                        Grid.SetRow(myBorder3, counter);
+                        DynamicGrid.Children.Add(myBorder3);
+                    }
+                }
+            }
 
             ExerciseLayout.Children.Add(DynamicGrid);
         }
