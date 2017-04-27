@@ -28,13 +28,13 @@
     <AppXManifest Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-27T02:29:22.184</Modified>
+      <Modified>2017-04-27T02:36:18.896</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\GymPlanner.exe">
       <PackagePath>entrypoint\GymPlanner.exe</PackagePath>
-      <Modified>2017-04-27T02:29:21.561</Modified>
+      <Modified>2017-04-27T02:36:18.578</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Damian Curran\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -673,7 +673,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\Core\GymPlanner.exe">
       <PackagePath>GymPlanner.exe</PackagePath>
-      <Modified>2017-04-27T02:29:22.181</Modified>
+      <Modified>2017-04-27T02:36:18.893</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
