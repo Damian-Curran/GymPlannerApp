@@ -28,6 +28,8 @@ namespace GymPlanner
         string randomMuscle1 = "";
         string randomMuscle2 = "";
 
+        int rowSelected = 0;
+
         string[,] reee = new string[43, 5];
 
         public PlanExercises()
@@ -37,6 +39,8 @@ namespace GymPlanner
             var obj = App.Current as App;
 
             Array.Copy(obj.GlobalExerciseArray, 0, reee, 0, obj.GlobalExerciseArray.Length);
+
+            rowSelected = obj.planPicked - 1;
 
             randomMuscle1 = obj.exercise1;
             randomMuscle2 = obj.exercise2;
@@ -51,7 +55,7 @@ namespace GymPlanner
             }
             else if (obj.pagePath == 1)
             {
-                
+                CreateGridFromSaved();
             }
         }
 
@@ -304,6 +308,147 @@ namespace GymPlanner
                         counter++;
                     }
                 }
+            }
+
+            ExerciseLayout.Children.Add(DynamicGrid);
+        }
+
+        private void CreateGridFromSaved()
+        {
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            int counter = 0;
+            int arrayPos = 0;
+
+            Grid DynamicGrid = new Grid();
+            DynamicGrid.HorizontalAlignment = HorizontalAlignment.Stretch;
+            DynamicGrid.Background = new SolidColorBrush(Colors.LightSteelBlue);
+            DynamicGrid.BorderThickness = new Windows.UI.Xaml.Thickness(2, 2, 2, 2);
+            DynamicGrid.BorderBrush = new SolidColorBrush(Colors.Black);
+
+            var height = new GridLength(1, GridUnitType.Star);
+            var width = new GridLength(1, GridUnitType.Star);
+            var width2 = new GridLength(2, GridUnitType.Star);
+
+
+            for (int i = 0; i <= 1; i++)
+            {
+                if (i == 0)
+                {
+                    DynamicGrid.ColumnDefinitions.Add(new ColumnDefinition()
+                    {
+                        Width = width
+                    });
+                }
+                if (i == 1)
+                {
+                    DynamicGrid.ColumnDefinitions.Add(new ColumnDefinition()
+                    {
+                        Width = width2
+                    });
+                }
+            }
+
+            for (int i = 0; i <= 7; i++)
+            {
+
+                DynamicGrid.RowDefinitions.Add(new RowDefinition()
+                {
+                    Height = height
+                });
+
+            }
+
+            counter = 0;
+            string[] getPlan = new string[8];
+            int j = 0;
+            int rowNo = 0;
+            int rowCount = 1;
+
+            while (localSettings.Values["someSettingInStorage" + "" + counter] != null)
+            {
+                getPlan[arrayPos] = localSettings.Values["someSettingInStorage" + "" + counter].ToString();
+                string what = getPlan[arrayPos];
+                if (localSettings.Values["someSettingInStorage" + "" + counter].ToString() == "1")
+                {
+                    if (rowNo == rowSelected)
+                    {
+                        for (int i = 0; i <= 42; i++)
+                        {
+                            for (int k = 0; k < arrayPos; k++)
+                            {
+                                if (getPlan[k] == reee[i, 1])
+                                {
+                                    Border myBorder1 = new Border();
+                                    myBorder1.BorderBrush = new SolidColorBrush(Colors.Black);
+                                    myBorder1.BorderThickness = new Thickness(1);
+
+                                    Image img = new Image();
+                                    BitmapImage tmp = new BitmapImage(new Uri(reee[i, 2], UriKind.Absolute));
+                                    img.Source = tmp;
+                                    Grid.SetRow(img, rowCount);
+                                    Grid.SetColumn(img, 0);
+                                    DynamicGrid.Children.Add(img);
+
+                                    TextBlock label1 = new TextBlock();
+                                    label1.Text = reee[i, 1];
+                                    label1.FontSize = 10;
+                                    label1.VerticalAlignment = VerticalAlignment.Top;
+                                    label1.HorizontalAlignment = HorizontalAlignment.Center;
+                                    Grid.SetColumn(label1, 1);
+                                    Grid.SetRow(label1, rowCount);
+                                    DynamicGrid.Children.Add(label1);
+
+                                    TextBlock label2 = new TextBlock();
+                                    label2.Text = reee[i, 3];
+                                    label2.FontSize = 10;
+                                    label2.VerticalAlignment = VerticalAlignment.Center;
+                                    Grid.SetColumn(label2, 1);
+                                    Grid.SetRow(label2, rowCount);
+                                    DynamicGrid.Children.Add(label2);
+
+                                    Run run1 = new Run();
+                                    run1.Text = "For a link to a YouTube video click here";
+
+                                    Hyperlink hyperlink = new Hyperlink()
+                                    {
+                                        NavigateUri = new Uri(reee[i, 4])
+                                    };
+
+                                    Border myBorder3 = new Border();
+                                    myBorder3.BorderBrush = new SolidColorBrush(Colors.Black);
+                                    myBorder3.BorderThickness = new Thickness(1);
+
+                                    TextBlock label3 = new TextBlock();
+                                    //label3.Text = reee[i, 4];
+                                    label3.FontSize = 10;
+                                    label3.VerticalAlignment = VerticalAlignment.Bottom;
+
+                                    hyperlink.Inlines.Add(run1);
+                                    label3.Inlines.Add(hyperlink);
+
+                                    myBorder3.Child = label3;
+
+                                    Grid.SetColumn(myBorder3, 1);
+                                    Grid.SetRow(myBorder3, rowCount);
+                                    DynamicGrid.Children.Add(myBorder3);
+
+                                    rowCount++;
+                                }
+                            }
+                        }
+                    }
+
+                    getPlan = new string[8];
+                    string agh = getPlan[0];
+                    arrayPos = 0;
+                    rowNo++;
+                }
+                else
+                {
+                    arrayPos++;
+                }
+
+                counter++;
             }
 
             ExerciseLayout.Children.Add(DynamicGrid);

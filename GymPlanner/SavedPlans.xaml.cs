@@ -91,6 +91,7 @@ namespace GymPlanner
                             label1.HorizontalAlignment = HorizontalAlignment.Left;
 
                             myBorder1.Child = label1;
+                            label1.Tapped += OMG;
                             Grid.SetColumn(label1, 0);
                             Grid.SetRow(label1, rowNo);
 
@@ -117,6 +118,17 @@ namespace GymPlanner
             }
 
             ExerciseLayout2.Children.Add(DynamicGrid);
+        }
+
+        private void OMG(object sender, TappedRoutedEventArgs args)
+        {
+            var obj = App.Current as App;
+            TextBlock hello = (TextBlock)sender;
+            //string wtf = hello.Text;
+            int number2 = Grid.GetRow(hello);
+
+            obj.planPicked = number2;
+            Frame.Navigate(typeof(PlanExercises));
         }
     }
 }

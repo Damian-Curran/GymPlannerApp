@@ -39,6 +39,7 @@ namespace GymPlanner
         public string muscleExer6 { get; set; }
 
         public int pagePath { get; set; }
+        public int planPicked { get; set; }
 
         public string[,] GlobalExerciseArray = new string[43, 5] {
                 {"Legs", "Barbell Full Squat", "ms-appx:///Assets/fullSquat.png", "Stand with your feet slightly wider than your hips.\n Your toes should be pointed slightly outward.\n Look straight ahead and stare at a spot on the wall.\n Bend knees to 90' while back is straight.", "https://www.youtube.com/watch?v=1xMaFs0L3ao" },
