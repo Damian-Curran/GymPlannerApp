@@ -26,5 +26,25 @@ namespace GymPlanner
         {
             this.InitializeComponent();
         }
+
+        private void btn1_click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SavedPlans));
+        }
+
+        private void btn2_click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MuscleGroups));
+        }
+
+        private void btn3_click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MuscleGroups));
+        }
+
+        private void btn4_click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ForumPosts));
+        }
     }
 }

@@ -7,7 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="400">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Name="SavedPlans" Width="200"  Height="100" Click="btn1_click" Grid.Column="1" Grid.Row="0">
+            Saved Plans
+        </Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Name="SelectPlan" Width="200"  Height="100" Click="btn2_click" Grid.Column="1" Grid.Row="1">
+            Select Plan
+        </Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Name="RandomPlan" Width="200"  Height="100" Click="btn3_click" Grid.Column="1" Grid.Row="2">
+            Random Plan
+        </Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Name="ForumPage" Width="200"  Height="100" Click="btn4_click" Grid.Column="1" Grid.Row="3">
+            Forum Page
+        </Button>
     </Grid>
 </Page>
