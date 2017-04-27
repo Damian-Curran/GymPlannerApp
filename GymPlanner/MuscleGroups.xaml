@@ -7,7 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="MuscleLayout" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Stretch">
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="Exercise1" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center"></ComboBox>
+        <ComboBox x:Name="Exercise2" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"></ComboBox>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Name="ForumPage" Width="200" Height="100" Click="btn5_click" Grid.Column="1" Grid.Row="2">
+            Select Groups
+        </Button>
     </Grid>
 </Page>

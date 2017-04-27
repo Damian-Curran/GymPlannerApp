@@ -205,3 +205,8 @@ c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlann
 c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\obj\x86\Debug\SavedPlans.xaml
 c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\obj\x86\Debug\ForumPosts.xbf
 c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\obj\x86\Debug\SavedPlans.xbf
+c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\bin\x86\Debug\PlanExercises.xbf
+c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\obj\x86\Debug\PlanExercises.g.i.cs
+c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\obj\x86\Debug\PlanExercises.g.cs
+c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\obj\x86\Debug\PlanExercises.xaml
+c:\users\damian curran\documents\visual studio 2015\Projects\GymPlanner\GymPlanner\obj\x86\Debug\PlanExercises.xbf

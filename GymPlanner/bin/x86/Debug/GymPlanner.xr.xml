@@ -13,6 +13,7 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
@@ -36,7 +37,12 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="GymPlanner.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
     <RootType FullName="GymPlanner.MuscleGroups" />
+    <RootType FullName="GymPlanner.PlanExercises" />
     <RootType FullName="GymPlanner.SavedPlans" />
   </Roots.RootTypes>
 </Roots>

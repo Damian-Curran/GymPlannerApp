@@ -104,6 +104,9 @@
     <Compile Include="MuscleGroups.xaml.cs">
       <DependentUpon>MuscleGroups.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PlanExercises.xaml.cs">
+      <DependentUpon>PlanExercises.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavedPlans.xaml.cs">
       <DependentUpon>SavedPlans.xaml</DependentUpon>
@@ -139,6 +142,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MuscleGroups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlanExercises.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
