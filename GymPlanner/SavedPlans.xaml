@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="ExerciseLayout2" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="SavedPlansLayout" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     </Grid>
 </Page>

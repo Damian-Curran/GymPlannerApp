@@ -106,16 +106,16 @@ namespace GymPlanner
                             myBorder1.BorderBrush = new SolidColorBrush(Colors.Black);
                             myBorder1.BorderThickness = new Thickness(1);
 
-                            TextBlock label1 = new TextBlock();
-                            label1.Text = " " + (i + 1) + " " + getPlan[i];
-                            label1.FontSize = 10;
-                            label1.Margin = new Thickness(0, j, 0, 0);
-                            label1.HorizontalAlignment = HorizontalAlignment.Left;
+                            TextBlock planExercise = new TextBlock();
+                            planExercise.Text = " " + (i + 1) + " " + getPlan[i];
+                            planExercise.FontSize = 10;
+                            planExercise.Margin = new Thickness(0, j, 0, 0);
+                            planExercise.HorizontalAlignment = HorizontalAlignment.Left;
 
-                            myBorder1.Child = label1;
-                            label1.Tapped += OMG;
-                            Grid.SetColumn(label1, 0);
-                            Grid.SetRow(label1, rowNo);
+                            myBorder1.Child = planExercise;
+                            planExercise.Tapped += GetRow;
+                            Grid.SetColumn(planExercise, 0);
+                            Grid.SetRow(planExercise, rowNo);
 
                             Grid.SetColumn(myBorder1, 0);
                             Grid.SetRow(myBorder1, rowNo);
@@ -139,17 +139,16 @@ namespace GymPlanner
                 counter++;
             }
 
-            ExerciseLayout2.Children.Add(DynamicGrid);
+            SavedPlansLayout.Children.Add(DynamicGrid);
         }
 
-        private void OMG(object sender, TappedRoutedEventArgs args)
+        private void GetRow(object sender, TappedRoutedEventArgs args)
         {
             var obj = App.Current as App;
-            TextBlock hello = (TextBlock)sender;
-            //string wtf = hello.Text;
-            int number2 = Grid.GetRow(hello);
+            TextBlock blockCopy = (TextBlock)sender;
+            int rowNo = Grid.GetRow(blockCopy);
 
-            obj.planPicked = number2;
+            obj.planPicked = rowNo;
             Frame.Navigate(typeof(PlanExercises));
         }
 

@@ -30,14 +30,14 @@ namespace GymPlanner
 
         private void ComboBox()
         {
-            string[] employees = new string[]{"Biceps", "Triceps",
+            string[] muscleGroupnames = new string[]{"Biceps", "Triceps",
             "Legs", "Shoulders", "Chest",
             "Abs", "Back"};
 
             for (int i = 0; i < 7; i++)
             {
-                Exercise1.Items.Add(employees[i]);
-                Exercise2.Items.Add(employees[i]);
+                Exercise1.Items.Add(muscleGroupnames[i]);
+                Exercise2.Items.Add(muscleGroupnames[i]);
             }
         }
 

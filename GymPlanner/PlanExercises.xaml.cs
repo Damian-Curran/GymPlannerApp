@@ -20,9 +20,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace GymPlanner
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class PlanExercises : Page
     {
         string randomMuscle1 = "";
@@ -30,7 +27,7 @@ namespace GymPlanner
 
         int rowSelected = 0;
 
-        string[,] reee = new string[43, 5];
+        string[,] exerciseDetails = new string[43, 5];
 
         public PlanExercises()
         {
@@ -38,7 +35,7 @@ namespace GymPlanner
 
             var obj = App.Current as App;
 
-            Array.Copy(obj.GlobalExerciseArray, 0, reee, 0, obj.GlobalExerciseArray.Length);
+            Array.Copy(obj.GlobalExerciseArray, 0, exerciseDetails, 0, obj.GlobalExerciseArray.Length);
 
             rowSelected = obj.planPicked - 1;
 
@@ -115,7 +112,7 @@ namespace GymPlanner
 
             for (int i = 0; i <= 42; i++)
             {
-                if (randomMuscle1 == reee[i, 0] || randomMuscle2 == reee[i, 0])
+                if (randomMuscle1 == exerciseDetails[i, 0] || randomMuscle2 == exerciseDetails[i, 0])
                 {
                     counter++;
                     for (int j = 0; j <= 4; j++)
@@ -125,50 +122,50 @@ namespace GymPlanner
                         myBorder1.BorderThickness = new Thickness(1);
 
                         Image img = new Image();
-                        BitmapImage tmp = new BitmapImage(new Uri(reee[i, 2], UriKind.Absolute));
+                        BitmapImage tmp = new BitmapImage(new Uri(exerciseDetails[i, 2], UriKind.Absolute));
                         img.Source = tmp;
                         img.Stretch = Stretch.Fill;
                         Grid.SetRow(img, counter);
                         Grid.SetColumn(img, 0);
                         DynamicGrid.Children.Add(img);
 
-                        TextBlock label1 = new TextBlock();
-                        label1.Text = reee[i, 1];
-                        label1.FontSize = 10;
-                        label1.VerticalAlignment = VerticalAlignment.Top;
-                        label1.HorizontalAlignment = HorizontalAlignment.Center;
-                        Grid.SetColumn(label1, 1);
-                        Grid.SetRow(label1, counter);
-                        DynamicGrid.Children.Add(label1);
+                        TextBlock exerciseName = new TextBlock();
+                        exerciseName.Text = exerciseDetails[i, 1];
+                        exerciseName.FontSize = 10;
+                        exerciseName.VerticalAlignment = VerticalAlignment.Top;
+                        exerciseName.HorizontalAlignment = HorizontalAlignment.Center;
+                        Grid.SetColumn(exerciseName, 1);
+                        Grid.SetRow(exerciseName, counter);
+                        DynamicGrid.Children.Add(exerciseName);
 
-                        TextBlock label2 = new TextBlock();
-                        label2.Text = reee[i, 3];
-                        label2.FontSize = 10;
-                        label2.VerticalAlignment = VerticalAlignment.Center;
-                        Grid.SetColumn(label2, 1);
-                        Grid.SetRow(label2, counter);
-                        DynamicGrid.Children.Add(label2);
+                        TextBlock details = new TextBlock();
+                        details.Text = exerciseDetails[i, 3];
+                        details.FontSize = 10;
+                        details.VerticalAlignment = VerticalAlignment.Center;
+                        Grid.SetColumn(details, 1);
+                        Grid.SetRow(details, counter);
+                        DynamicGrid.Children.Add(details);
 
                         Run run1 = new Run();
                         run1.Text = "For a link to a YouTube video click here";
 
                         Hyperlink hyperlink = new Hyperlink()
                         {
-                            NavigateUri = new Uri(reee[i, 4])
+                            NavigateUri = new Uri(exerciseDetails[i, 4])
                         };
 
                         Border myBorder3 = new Border();
                         myBorder3.BorderBrush = new SolidColorBrush(Colors.Black);
                         myBorder3.BorderThickness = new Thickness(1);
 
-                        TextBlock label3 = new TextBlock();
-                        label3.FontSize = 10;
-                        label3.VerticalAlignment = VerticalAlignment.Bottom;
+                        TextBlock videoLink = new TextBlock();
+                        videoLink.FontSize = 10;
+                        videoLink.VerticalAlignment = VerticalAlignment.Bottom;
 
                         hyperlink.Inlines.Add(run1);
-                        label3.Inlines.Add(hyperlink);
+                        videoLink.Inlines.Add(hyperlink);
 
-                        myBorder3.Child = label3;
+                        myBorder3.Child = videoLink;
 
                         Grid.SetColumn(myBorder3, 1);
                         Grid.SetRow(myBorder3, counter);
@@ -271,57 +268,57 @@ namespace GymPlanner
             {
                 for (int j = 0; j <= 5; j++)
                 {
-                    if (boxes[j] == reee[i, 1])
+                    if (boxes[j] == exerciseDetails[i, 1])
                     {
                         Border myBorder1 = new Border();
                         myBorder1.BorderBrush = new SolidColorBrush(Colors.Black);
                         myBorder1.BorderThickness = new Thickness(1);
 
                         Image img = new Image();
-                        BitmapImage tmp = new BitmapImage(new Uri(reee[i, 2], UriKind.Absolute));
+                        BitmapImage tmp = new BitmapImage(new Uri(exerciseDetails[i, 2], UriKind.Absolute));
                         img.Source = tmp;
                         img.Stretch = Stretch.Fill;
                         Grid.SetRow(img, counter);
                         Grid.SetColumn(img, 0);
                         DynamicGrid.Children.Add(img);
 
-                        TextBlock label1 = new TextBlock();
-                        label1.Text = reee[i, 1];
-                        label1.FontSize = 10;
-                        label1.VerticalAlignment = VerticalAlignment.Top;
-                        label1.HorizontalAlignment = HorizontalAlignment.Center;
-                        Grid.SetColumn(label1, 1);
-                        Grid.SetRow(label1, counter);
-                        DynamicGrid.Children.Add(label1);
+                        TextBlock exerciseName = new TextBlock();
+                        exerciseName.Text = exerciseDetails[i, 1];
+                        exerciseName.FontSize = 10;
+                        exerciseName.VerticalAlignment = VerticalAlignment.Top;
+                        exerciseName.HorizontalAlignment = HorizontalAlignment.Center;
+                        Grid.SetColumn(exerciseName, 1);
+                        Grid.SetRow(exerciseName, counter);
+                        DynamicGrid.Children.Add(exerciseName);
 
-                        TextBlock label2 = new TextBlock();
-                        label2.Text = reee[i, 3];
-                        label2.FontSize = 10;
-                        label2.VerticalAlignment = VerticalAlignment.Center;
-                        Grid.SetColumn(label2, 1);
-                        Grid.SetRow(label2, counter);
-                        DynamicGrid.Children.Add(label2);
+                        TextBlock details = new TextBlock();
+                        details.Text = exerciseDetails[i, 3];
+                        details.FontSize = 10;
+                        details.VerticalAlignment = VerticalAlignment.Center;
+                        Grid.SetColumn(details, 1);
+                        Grid.SetRow(details, counter);
+                        DynamicGrid.Children.Add(details);
 
                         Run run1 = new Run();
                         run1.Text = "For a link to a YouTube video click here";
 
                         Hyperlink hyperlink = new Hyperlink()
                         {
-                            NavigateUri = new Uri(reee[i, 4])
+                            NavigateUri = new Uri(exerciseDetails[i, 4])
                         };
 
                         Border myBorder3 = new Border();
                         myBorder3.BorderBrush = new SolidColorBrush(Colors.Black);
                         myBorder3.BorderThickness = new Thickness(1);
 
-                        TextBlock label3 = new TextBlock();
-                        label3.FontSize = 10;
-                        label3.VerticalAlignment = VerticalAlignment.Bottom;
+                        TextBlock videoLink = new TextBlock();
+                        videoLink.FontSize = 10;
+                        videoLink.VerticalAlignment = VerticalAlignment.Bottom;
 
                         hyperlink.Inlines.Add(run1);
-                        label3.Inlines.Add(hyperlink);
+                        videoLink.Inlines.Add(hyperlink);
 
-                        myBorder3.Child = label3;
+                        myBorder3.Child = videoLink;
 
                         Grid.SetColumn(myBorder3, 1);
                         Grid.SetRow(myBorder3, counter);
@@ -409,58 +406,58 @@ namespace GymPlanner
                         {
                             for (int k = 0; k < arrayPos; k++)
                             {
-                                if (getPlan[k] == reee[i, 1])
+                                if (getPlan[k] == exerciseDetails[i, 1])
                                 {
                                     Border myBorder1 = new Border();
                                     myBorder1.BorderBrush = new SolidColorBrush(Colors.Black);
                                     myBorder1.BorderThickness = new Thickness(1);
 
                                     Image img = new Image();
-                                    BitmapImage tmp = new BitmapImage(new Uri(reee[i, 2], UriKind.Absolute));
+                                    BitmapImage tmp = new BitmapImage(new Uri(exerciseDetails[i, 2], UriKind.Absolute));
                                     img.Source = tmp;
                                     img.Stretch = Stretch.Fill;
                                     Grid.SetRow(img, rowCount);
                                     Grid.SetColumn(img, 0);
                                     DynamicGrid.Children.Add(img);
 
-                                    TextBlock label1 = new TextBlock();
-                                    label1.Text = reee[i, 1];
-                                    label1.FontSize = 10;
-                                    label1.VerticalAlignment = VerticalAlignment.Top;
-                                    label1.HorizontalAlignment = HorizontalAlignment.Center;
-                                    Grid.SetColumn(label1, 1);
-                                    Grid.SetRow(label1, rowCount);
-                                    DynamicGrid.Children.Add(label1);
+                                    TextBlock exerciseName = new TextBlock();
+                                    exerciseName.Text = exerciseDetails[i, 1];
+                                    exerciseName.FontSize = 10;
+                                    exerciseName.VerticalAlignment = VerticalAlignment.Top;
+                                    exerciseName.HorizontalAlignment = HorizontalAlignment.Center;
+                                    Grid.SetColumn(exerciseName, 1);
+                                    Grid.SetRow(exerciseName, rowCount);
+                                    DynamicGrid.Children.Add(exerciseName);
 
-                                    TextBlock label2 = new TextBlock();
-                                    label2.Text = reee[i, 3];
-                                    label2.FontSize = 10;
-                                    label2.VerticalAlignment = VerticalAlignment.Center;
-                                    Grid.SetColumn(label2, 1);
-                                    Grid.SetRow(label2, rowCount);
-                                    DynamicGrid.Children.Add(label2);
+                                    TextBlock details = new TextBlock();
+                                    details.Text = exerciseDetails[i, 3];
+                                    details.FontSize = 10;
+                                    details.VerticalAlignment = VerticalAlignment.Center;
+                                    Grid.SetColumn(details, 1);
+                                    Grid.SetRow(details, rowCount);
+                                    DynamicGrid.Children.Add(details);
 
                                     Run run1 = new Run();
                                     run1.Text = "For a link to a YouTube video click here";
 
                                     Hyperlink hyperlink = new Hyperlink()
                                     {
-                                        NavigateUri = new Uri(reee[i, 4])
+                                        NavigateUri = new Uri(exerciseDetails[i, 4])
                                     };
 
                                     Border myBorder3 = new Border();
                                     myBorder3.BorderBrush = new SolidColorBrush(Colors.Black);
                                     myBorder3.BorderThickness = new Thickness(1);
 
-                                    TextBlock label3 = new TextBlock();
-                                    //label3.Text = reee[i, 4];
-                                    label3.FontSize = 10;
-                                    label3.VerticalAlignment = VerticalAlignment.Bottom;
+                                    TextBlock videoLink = new TextBlock();
+                                    //videoLink.Text = exerciseDetails[i, 4];
+                                    videoLink.FontSize = 10;
+                                    videoLink.VerticalAlignment = VerticalAlignment.Bottom;
 
                                     hyperlink.Inlines.Add(run1);
-                                    label3.Inlines.Add(hyperlink);
+                                    videoLink.Inlines.Add(hyperlink);
 
-                                    myBorder3.Child = label3;
+                                    myBorder3.Child = videoLink;
 
                                     Grid.SetColumn(myBorder3, 1);
                                     Grid.SetRow(myBorder3, rowCount);

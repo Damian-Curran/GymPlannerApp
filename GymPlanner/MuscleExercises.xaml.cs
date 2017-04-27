@@ -34,23 +34,23 @@ namespace GymPlanner
             string exer1 = "";
             string exer2 = "";
 
-            string[,] reee = new string[43, 5];
+            string[,] ExerciseDetailCopy = new string[43, 5];
 
-            Array.Copy(obj.GlobalExerciseArray, 0, reee, 0, obj.GlobalExerciseArray.Length);
+            Array.Copy(obj.GlobalExerciseArray, 0, ExerciseDetailCopy, 0, obj.GlobalExerciseArray.Length);
 
             exer1 = obj.exercise1;
             exer2 = obj.exercise2;
 
             for (int i = 0; i <= 42; i++)
             {
-                if (exer1 == reee[i, 0] || exer2 == reee[i, 0])
+                if (exer1 == ExerciseDetailCopy[i, 0] || exer2 == ExerciseDetailCopy[i, 0])
                 {
-                    Exercise1.Items.Add(reee[i, 1]);
-                    Exercise2.Items.Add(reee[i, 1]);
-                    Exercise3.Items.Add(reee[i, 1]);
-                    Exercise4.Items.Add(reee[i, 1]);
-                    Exercise5.Items.Add(reee[i, 1]);
-                    Exercise6.Items.Add(reee[i, 1]);
+                    Exercise1.Items.Add(ExerciseDetailCopy[i, 1]);
+                    Exercise2.Items.Add(ExerciseDetailCopy[i, 1]);
+                    Exercise3.Items.Add(ExerciseDetailCopy[i, 1]);
+                    Exercise4.Items.Add(ExerciseDetailCopy[i, 1]);
+                    Exercise5.Items.Add(ExerciseDetailCopy[i, 1]);
+                    Exercise6.Items.Add(ExerciseDetailCopy[i, 1]);
                 }
             }
         }
